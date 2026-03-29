@@ -153,5 +153,6 @@ K-Means clustering successfully identifies distinct groups of customers based on
 ## Author
 
 **Nihal V Srinivas**
-AI & Data Science Student
+
+(AI & Data Science Student)
 
