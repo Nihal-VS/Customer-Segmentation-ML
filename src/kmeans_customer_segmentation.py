@@ -81,9 +81,9 @@ plt.savefig("images/customer_clusters.png")
 plt.show()
 
 # ---------------- SAVE RESULTS ----------------
-data.to_csv("Customer_Segmentation_Result.csv", index=False)
+data.to_csv("results/Customer_Segmentation_Result.csv", index=False)
 
-print("\nCluster results saved to Customer_Segmentation_Result.csv")
+print("\nCluster results saved to results/Customer_Segmentation_Result.csv")
 
 # ---------------- CLUSTER SUMMARY ----------------
 cluster_summary = data.groupby('Cluster')[['Annual Income (k$)', 'Spending Score (1-100)']].mean()
