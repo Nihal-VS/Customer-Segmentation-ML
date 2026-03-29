@@ -109,6 +109,17 @@ Each color represents a **different customer group**, and red points represent *
 
 ---
 
+## Results
+
+### Elbow Method
+
+![Elbow Method](images/elbow_method.png)
+
+### Customer Segmentation
+
+![Customer Segmentation](images/customer_clusters.png)
+
+
 ## Project Structure
 
 ```

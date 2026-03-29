@@ -21,6 +21,7 @@ plt.plot(range(1,11), wcss)
 plt.title("Elbow Method")
 plt.xlabel("Number of Clusters")
 plt.ylabel("WCSS")
+plt.savefig("images/elbow_method.png")
 plt.show()
 
 # ---------------- APPLY KMEANS ----------------
@@ -76,6 +77,7 @@ plt.xlabel("Annual Income (k$)")
 plt.ylabel("Spending Score (1-100)")
 plt.legend()
 
+plt.savefig("images/customer_clusters.png")
 plt.show()
 
 # ---------------- SAVE RESULTS ----------------
