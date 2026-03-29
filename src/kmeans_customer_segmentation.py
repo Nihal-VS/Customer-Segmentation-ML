@@ -5,30 +5,33 @@ from sklearn.cluster import KMeans
 # ---------------- LOAD DATASET ----------------
 data = pd.read_csv("data/Mall_Customers.csv")
 
-# Select features for clustering
+# Select features
 X = data[['Annual Income (k$)', 'Spending Score (1-100)']]
 
 # ---------------- ELBOW METHOD ----------------
 wcss = []
 
-for i in range(1,11):
+for i in range(1, 11):
     kmeans = KMeans(n_clusters=i, random_state=42)
     kmeans.fit(X)
     wcss.append(kmeans.inertia_)
 
 plt.figure()
-plt.plot(range(1,11), wcss)
+plt.plot(range(1, 11), wcss)
 plt.title("Elbow Method")
 plt.xlabel("Number of Clusters")
 plt.ylabel("WCSS")
+
+# Save elbow graph
 plt.savefig("images/elbow_method.png")
+
 plt.show()
 
 # ---------------- APPLY KMEANS ----------------
 kmeans = KMeans(n_clusters=5, random_state=42)
 y_kmeans = kmeans.fit_predict(X)
 
-# Add cluster numbers to dataset
+# Add cluster numbers
 data['Cluster'] = y_kmeans
 
 # ---------------- CLUSTER INTERPRETATION ----------------
@@ -77,7 +80,9 @@ plt.xlabel("Annual Income (k$)")
 plt.ylabel("Spending Score (1-100)")
 plt.legend()
 
+# Save cluster graph
 plt.savefig("images/customer_clusters.png")
+
 plt.show()
 
 # ---------------- SAVE RESULTS ----------------
